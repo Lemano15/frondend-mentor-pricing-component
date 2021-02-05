@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link 
+  href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" 
+  rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
   
   <title>Frontend Mentor | Interactive pricing component</title>
 
@@ -27,34 +32,37 @@
       <div id="logistics">
         <p class="logisticsTitle">100k Pageviews</p>
         <input type="range" min="0" max="100" value="50" id="priceSlider">
-        <h1 id="price">$0</h1><p id="priceProportion">/ month</p>
-        <div>
+        <div class="priceContainer">
+          <h1 id="price">$0</h1>
+          <p id="priceProportion">/ month</p>
+        </div>
+        <div class="billingContainer">
           <p class="switchOption">Montly Billing</p>
           <label class="switch">
               <input type="checkbox">
               <span class="slider round"></span>
           </label>
           <p class="switchOption">Yearly Billing</p>
-          <p id="discount">25% discount</p>
+          <p id="discount">-25%</p>
         </div>
       </div>
 
       <div id="trialConfirmation">
         <div class="perksList">
           <div class="perk">
-            <img src="images/icon-check.svg" alt="green check icon"/>
+            <img src="images/icon-check.svg" alt="green check icon" class="checkMark"/>
             <p class="perkTitle">Unlimited websites</p>
           </div>
           <div class="perk">
-            <img src="images/icon-check.svg" alt="green check icon"/>
+            <img src="images/icon-check.svg" alt="green check icon" class="checkMark"/>
             <p class="perkTitle">100% data ownership</p>
           </div>
           <div class="perk">
-            <img src="images/icon-check.svg" alt="green check icon"/>
+            <img src="images/icon-check.svg" alt="green check icon" class="checkMark"/>
             <p class="perkTitle">Email reports</p>
           </div>
         </div>
-        <button id="startTrial">Start my trial</button>
+        <button id="startBtn">Start my trial</button>
       </div>
     </section>
 
