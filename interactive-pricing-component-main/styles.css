@@ -169,7 +169,7 @@ body {
 }
 
 #mastHead > * {
-    margin: .5em 0;
+    margin: .1em 0;
 }
 
 #sectionTitle {
@@ -184,10 +184,10 @@ body {
 
 #cardContainer {
     display: flex;
-    top: 50;
     flex-direction: column;
     justify-content: space-between;
     width: 90%;
+    max-width: 500px;
     margin: 0 auto;
     border-radius: 10px;
     font-size: .8rem;
@@ -199,20 +199,26 @@ body {
 
 .logisticsTitle {
     padding: 2em 0;
+    margin: 1em auto;
     letter-spacing: 1px;
+    order: -2;
 }
 
 #priceSlider {
-    width: 90%;
-    margin: 1em 0;
+    width: 88%;
+    margin: 1em auto;
 }
 
 .priceContainer {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1em 0;
-    margin-top: 1em;
+    width: 50%;
+    margin: 2em auto 1em auto;
+}
+
+.priceContainer > * {
+    margin: 0 .1em;
 }
 
 #price {
@@ -222,16 +228,21 @@ body {
 .billingContainer {
     display: flex;
     position: relative;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 80%;
     padding: 1em 0;
     margin: 0 auto;
+}
+
+.billingContainer > * {
+    margin: 0 .5em;
 }
 
 .switch {
     position: relative;
     display: inline-block;
     width: 50px;
+    height: 22px;
 }
 
 .switch input[type="checkbox"] {
@@ -254,10 +265,10 @@ body {
 .toggleSlider:before {
     position: absolute;
     content: "";
-    height: 15px;
-    width: 15px;
+    height: 16px;
+    width: 16px;
     left: 4px;
-    bottom: 4px;
+    bottom: 3px;
     -webkit-transition: .4s;
 }
 
@@ -276,11 +287,16 @@ input:checked + .toggleSlider:before {
 }
 
 #discount {
-    padding: .2em .5em;
+    position: absolute;
+    left: 85%;
+    bottom: 30%;
+    padding: .2em .7em;
     border-radius: 20px;
 }
 
 #trialConfirmation {
+    display: flex;
+    flex-direction: column;
     padding: 1em 0 2em 0;
 }
 
@@ -288,6 +304,7 @@ input:checked + .toggleSlider:before {
     display: flex;
     flex-direction: column;
     width: 50%;
+    max-width: 200px;
     margin: 1em auto;
 }
 
@@ -308,6 +325,48 @@ input:checked + .toggleSlider:before {
     border-radius: 30px;
     border: none;
     cursor: pointer;
-    margin: 1em 0;
+    margin: 1em auto;
     transition: .5s;
+    width: 50%;
+    max-width: 200px;
+}
+
+@media (min-width: 700px) {
+
+    #mastHead {
+        background-size: 150px 150px;
+    }
+
+    #cardContainer {
+    }
+
+    #logistics {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+
+    #trialConfirmation {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1em 0;
+    }
+
+    .logisticsTitle {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        letter-spacing: 2px;
+    }
+
+    .priceContainer {
+        order: -1;
+        justify-content: flex-end;
+        margin: 1em auto;
+    }
+
+    .billingContainer {
+        margin: 2em auto .5em auto;
+    }
 }
