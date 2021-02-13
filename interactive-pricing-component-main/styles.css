@@ -39,19 +39,21 @@ body {
 
 #priceSlider {
     -webkit-appearance: none;
+    background: linear-gradient(90deg,hsl(174, 77%, 80%) 50%, hsl(223, 50%, 87%) 50%);
+    border-radius: 15px;
 }
 
 #priceSlider::-webkit-slider-runnable-track {
     width: 100%;
     height: 10px;
-    background-color: hsl(174, 77%, 80%);
+    background: linear-gradient(90deg,hsl(174, 77%, 80%) 50%, hsl(223, 50%, 87%) 50%);
     border-radius: 25px;
 }
 
 #priceSlider::-moz-range-track {
     width: 100%;
     height: 10px;
-    background-color: hsl(174, 77%, 80%);
+    background: linear-gradient(90deg,hsl(174, 77%, 80%) 50%, hsl(223, 50%, 87%) 50%);
     border-radius: 25px;
 }
 
@@ -200,8 +202,11 @@ body {
 .logisticsTitle {
     padding: 2em 0;
     margin: 1em auto;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     order: -2;
+}
+#pageViewNumber {
+    margin: 0 .3em;
 }
 
 #priceSlider {
@@ -269,7 +274,7 @@ body {
     width: 16px;
     left: 4px;
     bottom: 3px;
-    -webkit-transition: .4s;
+    transition: .4s;
 }
 
 input:checked + .toggleSlider:before {
@@ -287,11 +292,20 @@ input:checked + .toggleSlider:before {
 }
 
 #discount {
+    display: none;
     position: absolute;
     left: 85%;
     bottom: 30%;
     padding: .2em .7em;
     border-radius: 20px;
+}
+
+#shortPage {
+    display: block;
+}
+
+#longPage {
+    display: none;
 }
 
 #trialConfirmation {
@@ -337,9 +351,6 @@ input:checked + .toggleSlider:before {
         background-size: 150px 150px;
     }
 
-    #cardContainer {
-    }
-
     #logistics {
         display: flex;
         flex-flow: row wrap;
@@ -368,5 +379,22 @@ input:checked + .toggleSlider:before {
 
     .billingContainer {
         margin: 2em auto .5em auto;
+    }
+
+    #discount {
+        font-size: .5rem;
+        left: 81%;
+        bottom: 35%;
+        padding: .2em .5em;
+        border-radius: 20px;
+        width: 70px;
+    }
+
+    #shortPage {
+        display: none;
+    }
+    
+    #longPage {
+        display: block;
     }
 }

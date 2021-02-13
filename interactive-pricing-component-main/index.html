@@ -30,20 +30,21 @@
 
     <section id="cardContainer">
       <div id="logistics">
-        <p class="logisticsTitle">100k Pageviews</p>
-        <input type="range" min="0" max="100" value="50" id="priceSlider">
+        <p class="logisticsTitle"><span id="pageViewNumber">100k</span> Pageviews</p>
+        <input type="range" min="0" max="4" step="1" id="priceSlider">
+        
         <div class="priceContainer">
-          <h1 id="price">$16.00</h1>
+          <h1 id="price">$<span id="priceValue">16</span>.00</h1>
           <p id="priceProportion">/ month</p>
         </div>
         <div class="billingContainer">
           <p class="switchOption">Monthly Billing</p>
           <label class="switch">
-              <input type="checkbox">
+              <input type="checkbox" onClick="discountAction(this)" id="discountToggle">
               <span class="toggleSlider round"></span>
           </label>
           <p class="switchOption">Yearly Billing</p>
-          <p id="discount">-25%</p>
+          <p id="discount"><span id="shortPage">-25%</span><span id="longPage">-25% discount</span></p>
         </div>
       </div>
 
@@ -72,5 +73,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <script src="index.js"></script>
 </body>
 </html>
